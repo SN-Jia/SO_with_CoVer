@@ -1,0 +1,30 @@
+nohup python ./examples_original/run_glue_coherence.py \
+    --score-runID 1672910757 \
+    --hdim 200 \
+    --has-doc --diff-ss \
+    --model_type bert \
+    --model_name_or_path bert-base-uncased \
+    --task_name aan \
+    --do_eval \
+    --do_lower_case \
+    --data_dir glue_data_new/aan \
+    --max_seq_length 35 \
+    --per_gpu_eval_batch_size 1   \
+    --per_gpu_train_batch_size 4   \
+    --gradient_accumulation_steps 1 \
+    --learning_rate 5e-5 \
+    --evaluate_during_training \
+    --num_train_epochs 2.0 \
+    --logging_steps 4000 \
+    --save_steps 0 \
+    --cuda_ip cuda:0 \
+    --overwrite_output_dir \
+    --ff_size 3072 \
+    --heads 8 \
+    --para_dropout 0.1 \
+    --inter_layers 2 \
+    --beam_size 16 \
+    --pairwise_loss_lam 0.4 \
+    --alpha 1 \
+    --output_dir output/aan_batch1_lr5_2epo_loss04/ \
+	> output/aan_batch1_lr5_2epo_loss04/coherence_log.out 2>&1 &

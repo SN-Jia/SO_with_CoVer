@@ -1,7 +1,6 @@
 nohup python ./examples_original/run_glue_coherence.py \
-    --score-runID 1672910757 \
+    --score-runID 1673282029 \
     --hdim 200 \
-    --has-doc --diff-ss \
     --model_type bert \
     --model_name_or_path bert-base-uncased \
     --task_name aan \

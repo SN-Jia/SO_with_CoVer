@@ -63,6 +63,7 @@ for item in data_type:
         for k, v in pn_data.items():
             # Two negative samples for one document
             choice_ids = random.sample([i for i in range(1, len(v))], 2)
+            choice_ids.sort()
 
             fw.write(f'{k}\t{v[0]}') # positive sample
             for c in choice_ids:

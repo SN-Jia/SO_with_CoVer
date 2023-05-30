@@ -291,7 +291,7 @@ if __name__ == '__main__':
     model.load_state_dict(torch.load(f'../saved/{args.dataset}/{run_ID}_model.pt'))
     model.eval()
         
-    test_loss, acc, results = eval_or_test_model(model, test_loader, args.sent_seq, args.has_doc)
+    test_loss, acc, results = eval_or_test_model(model, test_loader)
     print(f'\nEpoch: {best_epoch+1} Test loss, acc at best valid acc: {test_loss}, {acc}')
     
         

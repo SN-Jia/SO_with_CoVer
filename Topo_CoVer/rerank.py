@@ -86,6 +86,7 @@ if __name__ == '__main__':
     parser.add_argument("--hdim", type=int, default=200, help="Hidden dim GCN.")
 
     parser.add_argument("--score-runID", type=int, default=0, help="Trained score model ID")
+    parser.add_argument("--threshold", type=float, default=0.3, help="Pairwise score threshold")
 
     # score model parameter
     parser.add_argument("--readout", type=str, default='sum', help="Graph classification readout function")
